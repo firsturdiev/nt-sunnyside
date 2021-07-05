@@ -6,11 +6,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/modules.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
 </head>
 
 <body>
+  <!-- SITE-HEADER -->
 
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="logo" href="./">
+          <img src="./img/logo.svg" width="124" height="24" alt="Sunnyside logo">
+        </a>
+
+        <nav class="sitenav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#">About</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#"> Services</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#">Projects</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link sitenav__link--contact" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="menu"></button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- SITE-CONTENT -->
+
+  <main class="site-content">
+    <!-- HERO -->
+
+    <div class="hero">
+      <div class="container">
+        <h1 class="hero__heading heading heading--primary">We are creatives</h1>
+      </div>
+    </div>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+      <div class="container">
+        <h2 class="visually-hidden">Features</h2>
+
+        <ul class="features__list">
+          <li class="features__item feature feature--brand">
+            <div class="feature__content">
+              <h3 class="feature__title heading heading--secondary">Transform your brand</h3>
+              <p class="feature__info">We are a full-service creative agency specializing in helping brands grow fast.
+                Engage your clients through compelling visuals that do most of the marketing for you.</p>
+              <a class="feature__link" href="#">Learn more</a>
+            </div>
+          </li>
+
+          <li class="features__item feature feature--audience">
+            <div class="feature__content">
+              <h3 class="feature__title heading heading--secondary">Stand out to the right audience</h3>
+              <p class="feature__info">Using a collaborative formula of designers, researchers, photographers,
+                videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+              <a class="feature__link" href="#">Learn more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    
+    <section class="services">
+      <div class="container">
+        <h2 class="visually-hidden">Services</h2>
+
+        <ul class="services__list">
+          <li class="services__item service service--design">
+            <h3 class="service__title heading heading--tertiary">Graphic Design</h3>
+            <p class="service__info">Great design makes you memorable. We deliver artwork that underscores your brand
+              message and captures potential clients’ attention.</p>
+          </li>
+
+          <li class="services__item service service--photography">
+            <h3 class="service__title heading heading--tertiary">Photography</h3>
+            <p class="service__info">Increase your credibility by getting the most stunning, high-quality photos that
+              improve your business image.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- SITE-FOOTER -->
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner"></div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

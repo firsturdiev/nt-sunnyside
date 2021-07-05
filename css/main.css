@@ -1,1 +1,256 @@
-@import 'modules.css';
+/* SITE-HEADER */
+
+.site-header {
+  padding: 32px 0;
+  background-color: #49bcf1;
+}
+
+.site-header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  display: block;
+}
+
+.sitenav {
+  position: absolute;
+  top: calc(100% + 60px);
+  left: 0;
+  transform: translateY(-150%);
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #fffcf8;
+  transition: transform 0.3s;
+}
+
+.sitenav--open {
+  transform: initial;
+}
+
+.sitenav::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: linear-gradient(135deg, transparent 49%, #fffcf8 50%);
+}
+
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitenav__item {
+  display: flex;
+  justify-content: center;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.sitenav__link {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sitenav__link--contact {
+  padding: 15px 30px;
+  font-family: "Fraunces 9pt Soft", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.11px;
+  text-transform: uppercase;
+  color: #24303e;
+  background-color: #fbd600;
+  border-radius: 28px;
+}
+
+.menu {
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+}
+
+/* HERO */
+
+.hero {
+  padding-top: 56px;
+  padding-bottom: 296px;
+  text-align: center;
+  background-color: #49bcf1;
+  background-image: url("../img/bg-hero.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.hero__heading {
+  color: #fff;
+}
+
+/* FEATURES */
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 312px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.feature--brand::before {
+  background-color: #F8D400;
+  background-image: url("../img/bg-feature-brand.png");
+}
+
+.feature--audience::before {
+  background-color: #FF7C6C;
+  background-image: url("../img/bg-feature-audience.png");
+}
+
+.feature__content {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.feature__title {
+  margin-bottom: 24px;
+}
+
+.feature__info {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.13px;
+}
+
+.feature__link {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Fraunces 9pt Soft', 'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: var(--color-text-primary);
+}
+
+.feature__link::after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  bottom: 0;
+  z-index: -1;
+  width: calc(100% + 18px);
+  height: 10px;
+  background-color: #FAD400;
+  border-radius: 28px;
+  opacity: 0.25;
+}
+
+/* SERVICES */
+
+.services .container,
+.features .container {
+  padding: 0;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service {
+  padding: 0 24px;
+  padding-top: 400px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.service--design {
+  background-color: #94E2D1;
+  background-image: url('../img/bg-service-design.png');
+}
+
+.service--photography {
+  background-color: #6BC9F8;
+  background-image: url('../img/bg-service-photography.png');
+}
+
+.service__title {
+  margin-bottom: 27px;
+}
+
+.service__info {
+  margin: 0;
+  color: #19536C;
+}
+
+/* RETINA IMAGES */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../img/bg-hero@2x.png");
+  }
+
+  .feature--brand::before {
+    background-image: url("../img/bg-feature-brand@2x.png");
+  }
+
+  .feature--audience::before {
+    background-image: url("../img/bg-feature-audience@2x.png");
+  }
+
+  .service--design {
+    background-image: url('../img/bg-service-design@2x.png');
+  }
+  
+  .service--photography {
+    background-image: url('../img/bg-service-photography@2x.png');
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .hero__heading {
+    font-size: 30px;
+  }
+}

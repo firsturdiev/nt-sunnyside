@@ -1,0 +1,252 @@
+/* TABLET */
+
+@media screen and (min-width: 600px) {
+  .heading--primary {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 7.25px;
+  }
+
+  .heading--secondary {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.25px;
+  }
+
+  /* SITE-HEADER */
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .sitenav {
+    position: initial;
+    transform: initial;
+    padding: initial;
+    width: initial;
+    text-align: initial;
+    transition: initial;
+    background-color: transparent;
+  }
+
+  .sitenav::before {
+    display: none;
+  }
+
+  .sitenav__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .sitenav__item {
+    display: initial;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+
+  .sitenav__link {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+  }
+
+  .sitenav__link--contact {
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #24303e;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 400px;
+    background-image: url("../img/bg-hero-tablet.png");
+  }
+
+  /* FEATURES */
+
+  .feature {
+    display: flex;
+  }
+
+  .feature:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .feature::before {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .feature__content {
+    padding: 100px 0;
+    padding-right: 80px;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  .feature__link::after {
+    transition: opacity 0.3s ease;
+  }
+
+  .feature__link:hover::after {
+    opacity: 1;
+  }
+
+  /* SERVICES */
+
+  .services__list {
+    display: flex;
+  }
+
+  .service {
+    width: 50%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .service--design {
+    background-image: url("../img/bg-service-design-tablet.png");
+  }
+
+  .service--photography {
+    background-image: url("../img/bg-service-photography-tablet.png");
+  }
+
+  /* RETINA IMAGES */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../img/bg-hero-tablet@2x.png");
+    }
+
+    .service--design {
+      background-image: url("../img/bg-service-design-tablet@2x.png");
+    }
+
+    .service--photography {
+      background-image: url("../img/bg-service-photography-tablet@2x.png");
+    }
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .heading--primary {
+    font-size: 56px;
+    line-height: 69px;
+    letter-spacing: 8.75px;
+  }
+
+  .heading--secondary {
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.3px;
+  }
+
+  /* SITE-HEADER */
+
+  .site-header {
+    padding: 34px 0;
+  }
+
+  .logo img {
+    width: 170px;
+    height: 33px;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-right: 47px;
+  }
+
+  .sitenav__link {
+    font-size: 18px;
+    line-height: 25px;
+    transition: color 0.3s ease;
+  }
+
+  .sitenav__link:hover {
+    color: lightgray;
+  }
+
+  .sitenav__link--contact {
+    padding: 15px 30px;
+  }
+
+  .sitenav__link--contact {
+    transition: background-color 0.3s ease;
+  }
+
+  .sitenav__link--contact:hover {
+    color: #24303e;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-bottom: 536px;
+    background-image: url("../img/bg-hero-desktop.png");
+  }
+
+  /* FEATURES */
+
+  .feature__content {
+    padding: 158px 0;
+    padding-left: 165px;
+    padding-right: 110px;
+  }
+
+  .feature__title {
+    margin-bottom: 32px;
+  }
+
+  .feature__info {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    /* SERVICES */
+
+    .service {
+      padding-left: 190px;
+      padding-right: 190px;
+    }
+  }
+
+  /* RETINA IMAGES */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("../img/bg-hero-desktop@2x.png");
+    }
+  }
+}
