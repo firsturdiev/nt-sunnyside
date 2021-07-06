@@ -115,6 +115,10 @@
   list-style: none;
 }
 
+.feature {
+  --link-color: #fe7766;
+}
+
 .feature::before {
   content: "";
   display: block;
@@ -126,18 +130,19 @@
 }
 
 .feature--brand::before {
-  background-color: #F8D400;
+  background-color: #f8d400;
   background-image: url("../img/bg-feature-brand.png");
 }
 
 .feature--audience::before {
-  background-color: #FF7C6C;
+  background-color: #ff7c6c;
   background-image: url("../img/bg-feature-audience.png");
 }
 
 .feature__content {
   padding: 64px 24px;
   text-align: center;
+  background-color: #fffcf8;
 }
 
 .feature__title {
@@ -154,9 +159,10 @@
 
 .feature__link {
   position: relative;
+  z-index: 10;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Fraunces 9pt Soft', 'Times New Roman', Times, serif;
+  font-family: "Fraunces 9pt Soft", "Times New Roman", Times, serif;
   font-weight: 900;
   font-size: 15px;
   line-height: 25px;
@@ -165,14 +171,14 @@
 }
 
 .feature__link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -9px;
   bottom: 0;
   z-index: -1;
   width: calc(100% + 18px);
   height: 10px;
-  background-color: #FAD400;
+  background-color: var(--link-color);
   border-radius: 28px;
   opacity: 0.25;
 }
@@ -201,13 +207,13 @@
 }
 
 .service--design {
-  background-color: #94E2D1;
-  background-image: url('../img/bg-service-design.png');
+  background-color: #94e2d1;
+  background-image: url("../img/bg-service-design.png");
 }
 
 .service--photography {
-  background-color: #6BC9F8;
-  background-image: url('../img/bg-service-photography.png');
+  background-color: #6bc9f8;
+  background-image: url("../img/bg-service-photography.png");
 }
 
 .service__title {
@@ -216,7 +222,78 @@
 
 .service__info {
   margin: 0;
-  color: #19536C;
+  color: #19536c;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  text-align: center;
+}
+
+.testimonials .container {
+  padding: 0;
+}
+
+.testimonials__inner {
+  padding: 0 24px;
+  padding-top: 64px;
+  padding-bottom: 86px;
+  background-color: #fffcf8;
+}
+
+.testimonials__heading {
+  margin-bottom: 64px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #a7aaad;
+}
+
+.testimonials__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.testimonials__item:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.testimonial {
+  max-width: 350px;
+}
+
+.testimonial__avatar {
+  display: inline-block;
+  margin-bottom: 32px;
+  border-radius: 50%;
+}
+
+.testimonial__quote {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.13px;
+  color: #5b636d;
+}
+
+.testimonial__author {
+  margin-bottom: 9px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.13px;
+}
+
+.testimonial__job {
+  font-size: 14px;
+  line-height: 25px;
+  color: #a7aaad;
 }
 
 /* RETINA IMAGES */
@@ -241,11 +318,11 @@
   }
 
   .service--design {
-    background-image: url('../img/bg-service-design@2x.png');
+    background-image: url("../img/bg-service-design@2x.png");
   }
-  
+
   .service--photography {
-    background-image: url('../img/bg-service-photography@2x.png');
+    background-image: url("../img/bg-service-photography@2x.png");
   }
 }
 

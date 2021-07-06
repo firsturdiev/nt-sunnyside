@@ -80,6 +80,7 @@
   }
 
   .feature:nth-child(odd) {
+    --link-color: #fad400;
     flex-direction: row-reverse;
   }
 
@@ -227,13 +228,21 @@
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 1200px) {
-    /* SERVICES */
+  /* SERVICES */
 
+  @media screen and (min-width: 1200px) {
     .service {
       padding-left: 190px;
       padding-right: 190px;
     }
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonials__list {
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   /* RETINA IMAGES */
