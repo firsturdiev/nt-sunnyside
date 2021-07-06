@@ -125,6 +125,21 @@
     background-image: url("../img/bg-service-photography-tablet.png");
   }
 
+  /* WORKS */
+
+  @media screen and (min-width: 950px) {
+    .work {
+      width: 25%;
+    }
+  }
+
+  /* SITE-FOOTER */
+
+  .site-footer {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
   /* RETINA IMAGES */
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
